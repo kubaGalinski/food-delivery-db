@@ -1,0 +1,27 @@
+{
+  "name": "back-end-knex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "knex migrate:latest",
+    "migrate:prod": "env-cmd knex migrate:latest --env production",
+    "rollback": "knex migrate:rollback",
+    "rollback:prod": "env-cmd knex migrate:rollback --env production",
+    "seed": "knex seed:run",
+    "seed:prod": "env-cmd knex seed:run --env production",
+    "start": "node ./src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "env-cmd": "^10.1.0",
+    "knex": "^2.3.0",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.1.2"
+  },
+  "type": "module"
+}
